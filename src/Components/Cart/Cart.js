@@ -9,7 +9,7 @@ const Cart = (props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [didSubmitting, setIsDidSubmitting] = useState(false);
   const cartCtx = useContext(CartContext);
-  const totalAmount = `$ ${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `$ ${cartCtx.totalAmount?.toFixed(2)}`;
   const hashItems = cartCtx.items.length > 0;
 
   const cartItemsRemoveHandler = (id) => {
